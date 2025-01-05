@@ -1,67 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="80">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="40" viewBox="0 0 800 40">
     <!-- Gradient Background -->
     <defs>
-        <linearGradient id="automation-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="professional-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" style="stop-color:#155200;stop-opacity:1" />
             <stop offset="50%" style="stop-color:#8DB88B;stop-opacity:1" />
             <stop offset="100%" style="stop-color:#C9E0CA;stop-opacity:1" />
         </linearGradient>
+
+        <!-- Halo Animation Gradient -->
+        <radialGradient id="halo-gradient" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#C9E0CA;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:transparent;stop-opacity:0" />
+        </radialGradient>
     </defs>
-    <!-- Background Rectangle -->
-    <rect width="800" height="80" fill="url(#automation-gradient)" />
+
+    <!-- Background -->
+    <rect width="800" height="40" fill="url(#professional-gradient)" />
 
     <!-- Header Text -->
-    <text x="50%" y="20" font-family="Roboto, sans-serif" font-size="20" fill="#FFFFFF" dominant-baseline="middle" text-anchor="middle">
-        PODIO
+    <text x="50%" y="25" font-family="Roboto, sans-serif" font-size="18" fill="#FFFFFF" font-weight="bold" dominant-baseline="middle" text-anchor="middle">
+        AUTOMATION INTELLIGENCE
     </text>
 
-    <!-- Centered Gear -->
-    <g transform="translate(400, 50)">
-        <!-- Outer Circle -->
-        <circle r="25" fill="#FFFFFF" />
-        <!-- Inner Circle -->
-        <circle r="20" fill="#8DB88B" />
-        <!-- Gear Teeth -->
-        <g>
-            <rect x="-2" y="-25" width="4" height="8" fill="#C9E0CA" />
-            <rect x="-2" y="17" width="4" height="8" fill="#C9E0CA" />
-            <rect x="-25" y="-2" width="8" height="4" fill="#C9E0CA" />
-            <rect x="17" y="-2" width="8" height="4" fill="#C9E0CA" />
-        </g>
-        <!-- Rotating Animation -->
-        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="3s" repeatCount="indefinite" />
+    <!-- Robot -->
+    <g id="ai-robot" transform="translate(50, 20)">
+        <!-- Head -->
+        <circle r="8" fill="#FFFFFF" stroke="#8DB88B" stroke-width="1" />
+        <!-- Eyes -->
+        <circle cx="-3" cy="-2" r="1.5" fill="#155200" />
+        <circle cx="3" cy="-2" r="1.5" fill="#155200" />
+        <!-- Mouth -->
+        <line x1="-3" y1="2" x2="3" y2="2" stroke="#8DB88B" stroke-width="1" />
+        <!-- Rotating Halo -->
+        <circle r="12" fill="url(#halo-gradient)">
+            <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="4s" repeatCount="indefinite" />
+        </circle>
+
+        <!-- Body -->
+        <rect x="-10" y="10" width="20" height="15" fill="#FFFFFF" rx="3" stroke="#8DB88B" stroke-width="0.5" />
+
+        <!-- Arms -->
+        <!-- Left Arm -->
+        <line x1="-10" y1="15" x2="-25" y2="15" stroke="#FFFFFF" stroke-width="2" />
+        <circle cx="-30" cy="15" r="3" fill="#8DB88B">
+            <animateTransform attributeName="transform" type="rotate" from="0 -30 15" to="360 -30 15" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <!-- Right Arm -->
+        <line x1="10" y1="15" x2="25" y2="15" stroke="#FFFFFF" stroke-width="2" />
+        <circle cx="30" cy="15" r="3" fill="#8DB88B">
+            <animateTransform attributeName="transform" type="rotate" from="0 30 15" to="-360 30 15" dur="3s" repeatCount="indefinite" />
+        </circle>
+
+        <!-- Animation: Robot Movement -->
+        <animateTransform attributeName="transform" type="translate" from="50 20" to="750 20" dur="6s" repeatCount="indefinite" />
     </g>
-
-    <!-- Interconnected Nodes -->
-    <!-- Node 1 -->
-    <circle cx="300" cy="50" r="8" fill="#FFFFFF">
-        <animateTransform attributeName="transform" type="rotate" from="0 400 50" to="360 400 50" dur="6s" repeatCount="indefinite" />
-    </circle>
-    <line x1="300" y1="50" x2="400" y2="50" stroke="#FFFFFF" stroke-width="1" opacity="0.8">
-        <animate attributeName="opacity" from="0.8" to="0.3" dur="2s" repeatCount="indefinite" />
-    </line>
-
-    <!-- Node 2 -->
-    <circle cx="500" cy="50" r="8" fill="#FFFFFF">
-        <animateTransform attributeName="transform" type="rotate" from="0 400 50" to="360 400 50" dur="6s" repeatCount="indefinite" />
-    </circle>
-    <line x1="500" y1="50" x2="400" y2="50" stroke="#FFFFFF" stroke-width="1" opacity="0.8">
-        <animate attributeName="opacity" from="0.8" to="0.3" dur="2s" repeatCount="indefinite" />
-    </line>
-
-    <!-- Node 3 -->
-    <circle cx="350" cy="20" r="5" fill="#C9E0CA">
-        <animateTransform attributeName="transform" type="rotate" from="0 400 50" to="360 400 50" dur="6s" repeatCount="indefinite" />
-    </circle>
-    <line x1="350" y1="20" x2="400" y2="50" stroke="#C9E0CA" stroke-width="1" opacity="0.8">
-        <animate attributeName="opacity" from="0.8" to="0.3" dur="2s" repeatCount="indefinite" />
-    </line>
-
-    <!-- Node 4 -->
-    <circle cx="450" cy="20" r="5" fill="#C9E0CA">
-        <animateTransform attributeName="transform" type="rotate" from="0 400 50" to="360 400 50" dur="6s" repeatCount="indefinite" />
-    </circle>
-    <line x1="450" y1="20" x2="400" y2="50" stroke="#C9E0CA" stroke-width="1" opacity="0.8">
-        <animate attributeName="opacity" from="0.8" to="0.3" dur="2s" repeatCount="indefinite" />
-    </line>
 </svg>
