@@ -14,7 +14,7 @@
     <line x1="20" y1="15" x2="25" y2="15" stroke="#C9E0CA" stroke-width="2"/>
     <text x="10" y="14" text-anchor="middle" font-size="9" font-family="Segoe UI" font-weight="bold" fill="#155200">AI</text>
   </g>
-<text x="60" y="30" class="section-label">WORK ORDER SUMMARY & CLEANUP</text>
-<text x="60" y="46" class="section-sub">Cleaned description, recall checks, recurrence status</text>
+    <text x="60" y="30" class="section-label">WORK ORDER SUMMARY & CLEANUP</text>
+    <text x="60" y="46" class="section-sub">Cleaned description, recall checks, recurrence status</text>
   <line x1="0" y1="58" x2="800" y2="58" stroke="#C9E0CA" stroke-width="1.5" />
 </svg>
