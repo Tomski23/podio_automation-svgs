@@ -15,7 +15,7 @@
     <text x="10" y="14" text-anchor="middle" font-size="9" font-family="Segoe UI" font-weight="bold" fill="#155200">AI</text>
   </g>
     <text x="60" y="30" class="section-label">Policy Review &amp; Final Decision </text>
-    <text x="60" y="46" class="section-sub">Owner approval requirements and special policy alerts</text>
+    <text x="60" y="46" class="section-sub">Owner requirements, policy alerts, and final approval status</text>
 
   <line x1="0" y1="58" x2="800" y2="58" stroke="#C9E0CA" stroke-width="1.5" />
 </svg>
